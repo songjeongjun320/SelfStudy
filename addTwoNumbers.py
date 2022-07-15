@@ -7,7 +7,7 @@ You may assume the two numbers do not contain any leading zero,
 except the number 0 itself.
 
 """
-l1 = [9,9,9,9,9]
+l1 = [0,0,0,0]
 l2 = [5,6,4]
 carry = 0
 tmp = 0
