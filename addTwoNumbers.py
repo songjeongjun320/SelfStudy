@@ -5,21 +5,29 @@ single digit. Add the two numbers and return the sum as a linked list.
 
 You may assume the two numbers do not contain any leading zero,
 except the number 0 itself.
-
 """
-l1 = [0,0,0,0]
+
+l1 = [2,4,3]
 l2 = [5,6,4]
 carry = 0
 tmp = 0
-output = [0,0,0]
+output = []
 
-for _ in range(3):
+while len(l1) != len(l2):
+    l2.append(0)
+
+for _ in range(len(l2)):
     tmp = l1[_] + l2[_] + carry
+    carry = 0
     if tmp >= 10:
-        output[_] = tmp-10
+        output.append(tmp-10)
         carry = 1
     else:
-        output[_] = tmp
+        output.append(tmp)
+    tmp = 0
+
+if carry >= 1:
+    output.append(carry)
 
 print(output)
 
