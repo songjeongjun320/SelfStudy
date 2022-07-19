@@ -1,4 +1,4 @@
-input = 2
+input = 32
 
 first_input = input
 switch = True
