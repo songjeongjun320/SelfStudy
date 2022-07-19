@@ -1,11 +1,26 @@
-input = 19
-tmp = input
-updated_input = 0
-count = 1
+input = 2
+
+first_input = input
+switch = True
+check_list = []
 
 while True:
-    if input == 1:
-        break    
+    # Check that this # was occured before
+    for _ in range(len(check_list)):
+        if check_list[_] == input:
+            switch = False
+            print("{0} is not a Happy Number".format(first_input))
+            break
+        else:
+            check_list.append(input)
+            
+    if input == 1 or switch == False:
+        break 
+    
+    check_list.append(input)
+    count = 1
+    tmp = input
+    updated_input = 0   
 
     while True:
         if tmp/10 < 1:
@@ -15,13 +30,13 @@ while True:
             print(count)
             tmp = tmp/10
 
-    for _ in range(count,-1,-1):
-        a,b = divmod(input, 10^(count))
+    for _ in range(count,0,-1):
+        a,b = divmod(input, 10**(_ - 1))
+        print("a {0}".format(a))
+        print("b {0}".format(b))
         updated_input += a*a
-        print(a*a)
-        input -= a * 10 ^ (count-1)
+        input -= a * 10 ** (_ - 1)
     
     input = updated_input
 if input == 1:
-    print(True)
     print(True)
