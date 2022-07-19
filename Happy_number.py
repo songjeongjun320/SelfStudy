@@ -24,3 +24,4 @@ while True:
     input = updated_input
 if input == 1:
     print(True)
+    print(True)
