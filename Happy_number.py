@@ -1,8 +1,9 @@
-input = 32
-
+input = 40
 first_input = input
 switch = True
 check_list = []
+
+# LeetCode에서 '/'가 안되는 문제
 
 while True:
     # Check that this # was occured before
