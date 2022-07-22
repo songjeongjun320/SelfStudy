@@ -9,7 +9,6 @@ You can return the answer in any order.
 nums = [3,2,4]
 switch = True
 output = []
-sum = 0
 target = 6
 
 for i in range(len(nums)):

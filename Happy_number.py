@@ -1,4 +1,4 @@
-input = 40
+input = 99999999999999999994
 first_input = input
 switch = True
 check_list = []
@@ -28,13 +28,10 @@ while True:
             break
         else:
             count += 1
-            print(count)
             tmp = tmp/10
 
     for _ in range(count,0,-1):
         a,b = divmod(input, 10**(_ - 1))
-        print("a {0}".format(a))
-        print("b {0}".format(b))
         updated_input += a*a
         input -= a * 10 ** (_ - 1)
     

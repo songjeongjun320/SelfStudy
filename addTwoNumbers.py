@@ -7,14 +7,15 @@ You may assume the two numbers do not contain any leading zero,
 except the number 0 itself.
 """
 
-l1 = [2,4,3]
-l2 = [5,6,4]
+l1 = [0]
+l2 = [0]
 carry = 0
 tmp = 0
 output = []
 
 while len(l1) != len(l2):
     l2.append(0)
+    print(l2)
 
 for _ in range(len(l2)):
     tmp = l1[_] + l2[_] + carry
