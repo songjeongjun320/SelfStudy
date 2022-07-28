@@ -4,12 +4,11 @@ string amongst an array of strings.
 
 If there is no common prefix, return an empty string"".
 """
-class Solution(object):
+class Solution():
     def longestCommonPrefix(self, strs):
         if not strs:
             return ""
-        shortest = min(strs)
-        print(shortest)
+        shortest = min(strs, key=len)
         for i, ch in enumerate(shortest):
             for other in strs:
                 if other[i] != ch:
@@ -18,8 +17,10 @@ class Solution(object):
 
 test = Solution()
 
-
 strs = ["flower", "flow", "flight"]
+output = Solution.longestCommonPrefix(strs)
+print(output)
+
 print(test.longestCommonPrefix(strs))
 
 strs_1 = []
