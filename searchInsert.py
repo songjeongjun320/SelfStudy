@@ -18,4 +18,5 @@ testcase = Solution()
 
 target = 7
 nums = [1,3,5,6]
+
 print(testcase.searchInsert(nums,target))
