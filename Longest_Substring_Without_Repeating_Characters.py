@@ -39,7 +39,7 @@ class Solution(object):
                 l = l + 1
                 r = l
                 continue
-            r += 1                    
+            r += 1
                               
         return output        
 
