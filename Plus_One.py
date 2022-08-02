@@ -9,10 +9,22 @@ Increment the large integer by one and return the resulting array of digits.
 
 class Solution():
     def plusOne(self, digits):
-        digits[len(digits)-1] += 1
+        digits.reverse()
+        r = 1
+        for _ in range(len(digits)):
+            digits[_] = digits[_] + r
+            r = 0
+            if digits[_] == 10:
+                digits[_] = 0
+                r = 1
+        if r == 1:
+            digits.append(1)
+        digits.reverse()
         return digits
     
 testcase = Solution()
-digits = [1,2,3]
+digits = [9]
 
 print(testcase.plusOne(digits))
+
+# 이거 리스트 위치에 따라서 10의 승수로 계산하기
