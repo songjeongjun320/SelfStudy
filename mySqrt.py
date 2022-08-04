@@ -20,7 +20,7 @@ class Solution():
             if x >= left and x < right:
                 return _
             _ += 1
-    
+
 testcase = Solution()
 x = 0
 print(testcase.mySqrt(x))
