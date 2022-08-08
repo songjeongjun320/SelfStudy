@@ -13,9 +13,10 @@ class Solution(object):
     def deleteDuplicates(self, head):
         left = head
         while head:
-            if head.val == head.next.val:
+            if head.next and head.val == head.next.val:
                 head.next = head.next.next
-            head = head.next
+            else:
+                head = head.next
         return left
 
 testcase = Solution()
