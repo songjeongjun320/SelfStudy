@@ -5,7 +5,7 @@ class Solution:
         for _ in range(len(ransomNote)):
             ransomList.append(ransomNote[_])
         for _ in range(len(magazine)):
-            magazineList.append(len(magazine))
+            magazineList.append(magazine[_])
         ransomList.sort()
         magazineList.sort()
         
@@ -17,10 +17,7 @@ class Solution:
                 return False
         return True
             
-        
-        
-    
 testcase = Solution()
 ransomNote = "aa"
-magazine = "aab"
+magazine = "baa"
 print(testcase.canConstruct(ransomNote, magazine))

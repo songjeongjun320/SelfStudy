@@ -3,9 +3,6 @@ Given the root of a binary tree, return the
 inorder traversal of its nodes' values.
 """
 
-from asyncio.windows_events import NULL
-
-
 class TreeNode(object):
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -14,10 +11,8 @@ class TreeNode(object):
 
 class Solution():
     def inorderTraversal(self, root):
-        
-        
-        pass
+        return inorderTraversal(self, root.left)
     
-root = [1,NULL,2,3]
+root = TreeNode(1,None,TreeNode(2,TreeNode(3)))
 testcase = Solution()
 print(testcase.inorderTraversal(root))
