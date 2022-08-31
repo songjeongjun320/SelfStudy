@@ -7,7 +7,8 @@ class Solution():
             nums.append(int(n[_]))
         count = nums.count(1)
         return count
-        
+
 testcase = Solution()
-n = 00000000000000000000000000001011
+n = format(11,'b')
+print(n)
 print(testcase.hammingWeight(n))
